@@ -9,7 +9,8 @@
 h1,
 h2,
 h3,
-p {
+p,
+body {
   margin: 0;
   padding: 0;
 }
@@ -61,20 +62,33 @@ hr {
   padding: 2rem;
   border-radius: 1rem;
 }
+@media screen and (max-width: 600px) {
+  .recipe {
+    width: 40rem;
+    margin: auto;
+    padding: 0;
+    border-radius: 0;
+  }
+}
 .recipe__img {
   width: 100%;
   border-radius: 1rem;
 }
-.recipe__prep-time {
+@media screen and (max-width: 600px) {
+  .recipe__img {
+    border-radius: 0;
+  }
+}
+.recipe__body__prep-time {
   background-color: #fff7fc;
   padding: 1rem;
   border-radius: 1rem;
 }
-.recipe__ingrediants, .recipe__instructions {
+.recipe__body__ingrediants, .recipe__body__instructions {
   display: flex;
   flex-direction: column;
 }
-.recipe__ingrediants::after, .recipe__instructions::after {
+.recipe__body__ingrediants::after, .recipe__body__instructions::after {
   content: "";
   display: block;
   width: 80%;
@@ -82,35 +96,38 @@ hr {
   background-color: #e2dede;
   align-self: center;
 }
-
-.list__item {
+@media screen and (max-width: 600px) {
+  .recipe__body {
+    padding: 1rem;
+  }
+}
+.recipe .list__item {
   color: #555;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
 }
-.list__item::marker {
+.recipe .list__item::marker {
   color: hsl(332, 51%, 32%);
   font-weight: 500;
 }
-.list__item span {
+.recipe .list__item span {
   color: #444;
   font-weight: bold;
 }
-
-.nutarion-table {
+.recipe .nutarion-table {
   padding: 0.5rem 2rem;
 }
-.nutarion-table__row {
+.recipe .nutarion-table__row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   padding: 0.8rem;
 }
-.nutarion-table__item {
+.recipe .nutarion-table__item {
   font-size: 1.5rem;
   color: #555;
 }
-.nutarion-table__item--colored {
+.recipe .nutarion-table__item--colored {
   color: hsl(332, 51%, 32%);
   font-size: 1.2rem;
   font-weight: 800;
