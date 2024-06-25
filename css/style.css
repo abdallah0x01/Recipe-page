@@ -79,27 +79,27 @@ hr {
     border-radius: 0;
   }
 }
-.recipe__body__prep-time {
+@media screen and (max-width: 600px) {
+  .recipe__body {
+    padding: 1rem;
+  }
+}
+.recipe__prep-time {
   background-color: #fff7fc;
   padding: 1rem;
   border-radius: 1rem;
 }
-.recipe__body__ingrediants, .recipe__body__instructions {
+.recipe__ingrediants, .recipe__instructions {
   display: flex;
   flex-direction: column;
 }
-.recipe__body__ingrediants::after, .recipe__body__instructions::after {
+.recipe__ingrediants::after, .recipe__instructions::after {
   content: "";
   display: block;
   width: 80%;
   height: 1px;
   background-color: #e2dede;
   align-self: center;
-}
-@media screen and (max-width: 600px) {
-  .recipe__body {
-    padding: 1rem;
-  }
 }
 .recipe .list__item {
   color: #555;
