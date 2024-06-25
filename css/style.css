@@ -4,15 +4,13 @@
 *::after,
 *::before {
   box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-p,
-body {
   margin: 0;
   padding: 0;
+}
+
+ul,
+ol {
+  padding-left: 2rem;
 }
 
 html {
@@ -30,7 +28,7 @@ hr {
 }
 
 .heading {
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .heading-1 {
   font-family: "Young Serif", serif;
